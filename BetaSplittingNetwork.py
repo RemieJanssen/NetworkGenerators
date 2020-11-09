@@ -167,7 +167,7 @@ def AddEdgeBetween(network,edge1,edge2,new_nodes=None):
 #Pick two edges uniformly at random and add an edge between these
 def AddEdgeUniform(network,new_nodes=None):
     edges = list(network.edges())
-    edge_indices = np.random.choice(range(len(edges)),2)
+    edge_indices = np.random.choice(range(len(edges)),2,replace=False)
     AddEdgeBetween(network,edges[edge_indices[0]],edges[edge_indices[1]],new_nodes=new_nodes)
     
     
